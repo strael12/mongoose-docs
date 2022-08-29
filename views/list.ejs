@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mongoose List</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+    <div class="container mt-100">
+        <ul class="main-list">
+            <% clients.forEach(function(client) {%> 
+                <li>
+                    <p><strong>Nome:</strong> <%- client.nome; %></p>
+                    <p><strong>E-mail:</strong> <%- client.email; %></p>
+                    <p><strong>Telefone:</strong> <%- client.telefone; %></p>
+                    <p><strong>Endereço:</strong> <%- client.endereco; %></p>
+                    <a class="delete" href="/delete/<%- client.id; %>">Deletar</a>
+                    <a class="update" href="/update/<%- client.id; %>">Editar</a>
+                </li>
+            <% }) %> 
+        </ul>
+    </div>
+    <div class="container">
+        <div><a href="/create" class="btn default">Cadastrar novo cliente</a></div>
+    </div>
+</body>
+</html>

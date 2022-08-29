@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mongoose Edit</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/update" method="POST">
+            <input type="text" hidden name="id" value="<%- clients._id %>">
+            <input type="text" name="nome" placeholder="Nome completo" value="<%- clients.nome; %> "/>
+            <input type="email" name="email" placeholder="exemplo@gmail.com" value="<%- clients.email; %>"/>
+            <input type="tel" name="telefone" placeholder="EX: 1188299384" value="<%- clients.telefone; %>"/>
+            <input type="text" name="endereco" placeholder="Rua do fulano de tal" value="<%- clients.endereco; %>"/>
+            <button type="submit" class="edit">Editar</button>
+        </form>
+    </div>
+</body>
+</html>
